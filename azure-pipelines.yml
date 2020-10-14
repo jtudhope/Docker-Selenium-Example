@@ -23,5 +23,5 @@ steps:
   inputs:
     testResultsFormat: 'XUnit'
     testResultsFiles: |
-      **/robot/gc/outputxunit.xml
-      **/robot/ff/outputxunit.xml
+      **/results/gc/outputxunit.xml
+      **/results/ff/outputxunit.xml
