@@ -25,7 +25,5 @@ steps:
     testResultsFormat: 'XUnit'
     testResultsFiles: |
       **/results/**/outputxunit.xml
-      **/results/**/*.html
-      **/results/**/*.png
     mergeTestResults: true
     failTaskOnFailedTests: true
