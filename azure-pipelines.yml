@@ -19,9 +19,11 @@ steps:
 - script: docker-compose run test-gc
   displayName: 'Run Test'
 
+
 - task: PublishTestResults@2
   inputs:
-    testResultsFormat: 'XUnit'
+    testResultsFormat: 'JUnit'
     testResultsFiles: |
-      **/robot/gc/outputxunit.xml
-      **/robot/ff/outputxunit.xml
+      **/results/**/outputxunit.xml
+    mergeTestResults: true
+    failTaskOnFailedTests: true
