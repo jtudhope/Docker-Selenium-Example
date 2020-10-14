@@ -22,6 +22,4 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'XUnit'
-    testResultsFiles: |
-      **/results/gc/outputxunit.xml
-      **/results/ff/outputxunit.xml
+    testResultsFiles: outputxunit.xml
