@@ -41,7 +41,7 @@ services:
 
   test-gc:
     build: robot
-    command: -v BROWSER:gc --outputdir /out /tests
+    command: -v BROWSER:gc -x outputxunit.xml --outputdir /out /tests
     volumes:
       - ./robot/tests:/tests:ro
       - ./results/gc:/out:rw
