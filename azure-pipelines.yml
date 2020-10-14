@@ -19,7 +19,13 @@ steps:
 - script: docker-compose run test-gc
   displayName: 'Run Test'
 
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'XUnit'
-    testResultsFiles: outputxunit.xml
+    testResultsFiles: |
+      **/results/**/outputxunit.xml
+      **/results/**/*.html
+      **/results/**/*.png
+    mergeTestResults: true
+    failTaskOnFailedTests: true
